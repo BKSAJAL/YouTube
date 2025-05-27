@@ -1,75 +1,88 @@
-# 🛍️ ShoppyGlobe
+# YouTube Clone 🎬
 
-ShoppyGlobe is a sleek and modern e-commerce platform where users can explore a wide range of products, search for their favorites, add items to the cart, and manage their selections with ease. It's built for a seamless and intuitive shopping experience.
-
----
-
-## 👨‍💻 Author
-
-**Sajal Bansal**
-Crafted with passion to bring a clean and functional online shopping experience to life.
+A simple and functional YouTube clone built with the ability to **search videos**, **filter by categories**, **watch videos**, and **interact through comments**. Users can also **register/login**, **create a channel**, and manage their profile.
 
 ---
 
-## 🚀 Setup Instructions
+## ✨ Features
 
-### GitHub Repository
+- 🔍 Search videos by **title**
+- 🎯 Filter videos by **category**
+- 📺 Watch videos with **video player & details**
+- 💬 **Add, update, delete** comments (logged-in users only)
+- 🧑‍💻 **User registration** & **authentication**
+- 📡 Create your own **channel**
+- 🧭 Intuitive navigation & user-friendly interface
 
-[https://github.com/BKSAJAL/Bookworm](https://github.com/BKSAJAL/Bookworm)
+---
 
-1. **Clone the repository**
+## 🛠️ Setup
+
+### 🔗 Repositories
+
+- **Frontend:** [Frontend Repo Link](https://github.com/BKSAJAL/YouTube)
+- **Backend:** [Backend Repo Link](https://github.com/BKSAJAL/YouTube-Node)
+
+### 📦 Backend Setup
 
 ```bash
-git clone <https://github.com/BKSAJAL/ShoppyGlobe.git>
-cd ShoppyGlobe
-```
-
-2. **Install dependencies**
-
-```bash
+git clone https://github.com/BKSAJAL/YouTube-Node.git
+cd your-backend-directory
 npm install
+npm start
 ```
 
-3. **Run the development server**
+````
+
+### 💻 Frontend Setup
 
 ```bash
+git clone https://github.com/BKSAJAL/YouTube.git
+cd your-frontend-directory
+npm install
 npm run dev
 ```
 
-4. **Build for production**
+---
 
-```bash
-npm run build
-```
+## 🚀 Usage Guide
 
-5. **Preview Production Build**
+Once the application is running, here’s how you can explore it:
 
-```bash
-npm run preview
-```
+### 🏠 Home Page
+
+- Use the **search bar** to look for videos by title.
+- Filter videos by category using the **category chips**.
+- Scroll down to view a list of **available videos**.
+
+### 🎥 Video Page
+
+- Click on any video to go to the **video player page**.
+- View **video details** and **comments**.
+- **Add a comment** (if logged in), or **update/delete** your own comments.
+
+### 🔐 Authentication
+
+- Click the **Sign In** button in the header to log in.
+- If you're new, go to the **Register page** from there.
+- Once logged in, your avatar will appear in the header.
+
+### 📺 Channel
+
+- Click the **“+” icon** in the header to create your channel.
+- Fill out the form and submit to create it.
+- Hover over your avatar and click **“View your channel”** to see it.
+- You’ll also find the **Logout** option under the avatar.
 
 ---
 
-## 🧾 Usage
+## 🙏 Author's Note
 
-Welcome to **ShoppyGlobe**, your one-stop destination for online shopping!
+Hey there! 👋
 
-### 🛒 Key Features:
+Thanks a ton for checking out this project. I built this YouTube clone not just as a coding exercise, but as a passion project to learn, experiment, and share what I love doing. Whether you're here to explore the code, contribute, or simply get inspired — I'm truly glad you stopped by. 💛
 
-- **Product Listings**: View a variety of products right on the landing page.
-- **Search Functionality**: Search for your favorite products with ease.
-- **Product Details**: Click on any product to view more information and add it to the cart.
-- **Shopping Cart**:
+If this project helped you in any way or sparked an idea, feel free to fork it, give it a ⭐, or drop a message. Let’s keep building cool stuff together!
 
-  - Add or remove products.
-  - Modify product quantities.
-  - View total quantity and total price.
-
-- **Cart Navigation**: The cart icon in the navigation bar shows the current number of items. Clicking it takes you to the checkout page.
-- **404 Handling**: Navigate to an unsupported route? Don’t worry — you’ll be guided to a neat “Page Not Found” view.
-
----
-
-## 🙌 Author’s Note
-
-Thank you for checking out **ShoppyGlobe**! This project is a labor of love aimed at learning, building, and sharing. If you find it useful or inspiring, feel free to fork it, contribute, or share it with others. 🌍🛒✨
+Stay curious, stay creative. 🚀
+````

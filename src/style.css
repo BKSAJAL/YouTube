@@ -1,33 +1,70 @@
 @import "tailwindcss";
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
+}
+
+* {
+  transition: all 0.2s ease-in-out;
 }
 
 body {
-  /* background-image: url("./assets/library.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   font-weight: lighter;
 }
 
-.product-card {
-  box-shadow: 0px 0px 5px 1px lightgray;
+.tooltip {
+  visibility: hidden;
+  position: absolute;
 }
 
-.cart-container {
+.has-tooltip:hover .tooltip {
+  z-index: 50;
+  visibility: visible;
+}
+
+/* header component */
+.sidebar-video-grid {
   display: grid;
-  grid-template-columns: 65% 25%;
-  justify-content: space-evenly;
-  gap: 1rem;
-  padding: 4rem 0rem;
+  grid-template-columns: minmax(200px, 15%) minmax(50%, 85%);
 }
 
-@media only screen and (max-width: 700px) {
-  .cart-container {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 4rem;
+/* header component */
+.minimize-sidebar {
+  display: grid;
+  grid-template-columns: minmax(100px, 6%) minmax(50%, 94%);
+}
+
+@media only screen and (max-width: 650px) {
+  .sidebar-video-grid {
+    display: grid;
+    grid-template-columns: minmax(100px, 6%) minmax(50%, 94%);
   }
+}
+
+/* hide scrollbar */
+.category::-webkit-scrollbar {
+  display: none;
+}
+
+/* video page */
+.video-page {
+  display: grid;
+  grid-template-columns: 65% 30%;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .video-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+button:hover {
+  cursor: pointer;
 }
