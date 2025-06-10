@@ -45,13 +45,12 @@ function Login() {
   //login user
   const login = async (form) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/v1/user/login", {
+      const res = await axios.post("https://youtube-node.onrender.com/api/v1/user/login", {
         username: form.username.toLowerCase(),
         email: form.email.toLowerCase(),
         password: form.password,
       });
       if (res.data) {
-        navigate("/", { replace: true });
         dispatch(
           saveUser({
             token: res.data?.token,
@@ -59,6 +58,7 @@ function Login() {
             channels: res.data?.channels,
           })
         );
+        navigate("/", { replace: true });
       }
       toast.success(res.data.message);
     } catch (err) {

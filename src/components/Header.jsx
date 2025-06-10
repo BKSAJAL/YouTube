@@ -9,7 +9,7 @@ import { handleSearch } from "../feature/searchSlice";
 import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import add from "../assets/add.png";
-import { saveUser } from "../feature/authSlice";
+import { logout } from "../feature/authSlice";
 import { useMediaQuery } from "react-responsive";
 
 function Header() {
@@ -21,7 +21,7 @@ function Header() {
 
   const { pathname } = useLocation();
 
-  const { username, channels } = useSelector((state) => state.user.user);
+  const { username, channels } = useSelector((state) => state.user);
 
   const showSidebar = useSelector((state) => state.showSidebar.showSidebar);
 
@@ -113,7 +113,7 @@ function Header() {
                 )}
                 <span
                   onClick={() => {
-                    dispatch(saveUser({}));
+                    dispatch(logout());
                   }}
                 >
                   Logout
@@ -175,7 +175,7 @@ function SideBarItem({ icon, label }) {
   const navigate = useNavigate();
   const showSidebar = useSelector((state) => state.showSidebar.showSidebar);
   const isMobile = useMediaQuery({ maxWidth: 650 });
-  
+
   return (
     <div
       onClick={() => label == "Home" && navigate("/")}

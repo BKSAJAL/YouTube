@@ -13,7 +13,7 @@ function Comments({ video }) {
   const [newComment, setNewComment] = useState("");
   const [editedComment, setEditedComment] = useState("");
   const [editCommentId, setEditCommentId] = useState(null);
-  const { username, token } = useSelector((state) => state.user.user);
+  const { username, token } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
   const toggleOptions = (id) => {
@@ -26,7 +26,7 @@ function Comments({ video }) {
 
   const fetchVideos = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/videos");
+      const res = await axios.get("https://youtube-node.onrender.com/api/v1/videos");
       if (res.data) dispatch(handleVideos(res.data));
     } catch (err) {
       console.log(err);
@@ -37,7 +37,7 @@ function Comments({ video }) {
   const addComment = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/v1/comment/addComment/${video._id}`,
+        `https://youtube-node.onrender.com/api/v1/comment/addComment/${video._id}`,
         {
           commentId: uuid(),
           userId: `@${username}`,
@@ -65,7 +65,7 @@ function Comments({ video }) {
   const deleteComment = async (commentId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/api/v1/comment/deleteComment/${video._id}`,
+        `https://youtube-node.onrender.com/api/v1/comment/deleteComment/${video._id}`,
         {
           data: { commentId },
         }
@@ -80,7 +80,7 @@ function Comments({ video }) {
   const updateComment = async (commentId) => {
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/v1/comment/updateComment/${video._id}`,
+        `https://youtube-node.onrender.com/api/v1/comment/updateComment/${video._id}`,
         {
           commentId,
           text: editedComment,

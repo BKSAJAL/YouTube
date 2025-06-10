@@ -13,7 +13,7 @@ function VideoList() {
 
   const { data, loading, error, refetch } = useFetch({
     method: "GET",
-    url: "http://localhost:3000/api/v1/videos",
+    url: "https://youtube-node.onrender.com/api/v1/videos",
   });
 
   //Filter videos based on categories

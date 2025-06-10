@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Navigate } from "react-router";
 
 export default function ProtectPrivateRoute({ children }) {
-  const { token } = useSelector((state) => state.user.user);
+  const { token } = useSelector((state) => state.user);
 
   //protect private route and redirect to login page
   if (!token) {

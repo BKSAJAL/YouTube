@@ -8,7 +8,7 @@ import { saveUser } from "../feature/authSlice";
 
 function CreateChannel() {
   const navigate = useNavigate();
-  const { token, username } = useSelector((state) => state.user.user);
+  const { token, username } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const [form, setForm] = useState({
     channelName: "",
@@ -27,7 +27,7 @@ function CreateChannel() {
   const createChannel = async (form) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/v1/channel/create",
+        "https://youtube-node.onrender.com/api/v1/channel/create",
         {
           channelName: form.channelName,
           description: form.description,

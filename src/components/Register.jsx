@@ -41,7 +41,7 @@ function Register() {
   const register = async (form) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/v1/user/register",
+        "https://youtube-node.onrender.com/api/v1/user/register",
         {
           username: form.username.toLowerCase(),
           email: form.email.toLowerCase(),

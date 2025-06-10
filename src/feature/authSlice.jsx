@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  user: {},
+  username: "",
+  token: "",
+  channels: [],
 };
 
 const authSlice = createSlice({
@@ -10,10 +12,14 @@ const authSlice = createSlice({
   reducers: {
     // Save user credentials
     saveUser: (state, action) => {
-      state.user = action.payload;
+      return {
+        ...state,
+        ...action.payload,
+      };
     },
+    logout: () => initialState,
   },
 });
 
-export const { saveUser } = authSlice.actions;
+export const { saveUser, logout } = authSlice.actions;
 export default authSlice.reducer;

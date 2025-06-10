@@ -6,12 +6,12 @@ import { formatCompact, timeAgo } from "../utils/helper";
 
 function ChannelPage() {
   const [channelData, setChannelData] = useState(null);
-  const { token } = useSelector((state) => state.user.user);
+  const { token } = useSelector((state) => state.user);
   const videos = useSelector((state) => state.videos.videos);
 
   const getChannel = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/channel/get", {
+      const res = await axios.get("https://youtube-node.onrender.com/api/v1/channel/get", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
